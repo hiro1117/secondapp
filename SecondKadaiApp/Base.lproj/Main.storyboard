@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SecondKadaiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,108 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYk-U7-VfK">
+                                <rect key="frame" x="201" y="99" width="198" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j8z-20-AXP">
+                                <rect key="frame" x="217" y="178" width="166" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRr-Ma-Q01">
+                                <rect key="frame" x="220" y="285" width="160" height="30"/>
+                                <state key="normal" title="次へ"/>
+                                <connections>
+                                    <segue destination="9TB-tw-255" kind="show" id="366-Ho-Goy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fRr-Ma-Q01" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="75J-T2-UqP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j8z-20-AXP" secondAttribute="trailing" constant="207" id="Lbn-3o-fQP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cYk-U7-VfK" secondAttribute="trailing" constant="181" id="Mha-jD-PYn"/>
+                            <constraint firstItem="cYk-U7-VfK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QrB-XK-jAZ"/>
+                            <constraint firstItem="fRr-Ma-Q01" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="STN-88-bAc"/>
+                            <constraint firstItem="fRr-Ma-Q01" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="277" id="UYW-Xz-rMt"/>
+                            <constraint firstAttribute="trailing" secondItem="fRr-Ma-Q01" secondAttribute="trailing" constant="220" id="cAt-Ha-jZl"/>
+                            <constraint firstItem="cYk-U7-VfK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="181" id="clg-0o-MOV"/>
+                            <constraint firstItem="j8z-20-AXP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="186" id="gS3-aL-eTb"/>
+                            <constraint firstItem="j8z-20-AXP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="207" id="iD2-Xq-U4Q"/>
+                            <constraint firstItem="j8z-20-AXP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iXL-GD-DsU"/>
+                            <constraint firstItem="j8z-20-AXP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-107" id="mIL-Lp-uCm"/>
+                            <constraint firstItem="j8z-20-AXP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="207" id="pfz-qt-H5x"/>
+                            <constraint firstItem="cYk-U7-VfK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-178.5" id="qBU-D0-bUP"/>
+                            <constraint firstItem="fRr-Ma-Q01" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="220" id="rcY-Zm-ots"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Mha-jD-PYn"/>
+                                <exclude reference="clg-0o-MOV"/>
+                                <exclude reference="Lbn-3o-fQP"/>
+                                <exclude reference="gS3-aL-eTb"/>
+                                <exclude reference="iD2-Xq-U4Q"/>
+                                <exclude reference="pfz-qt-H5x"/>
+                                <exclude reference="UYW-Xz-rMt"/>
+                                <exclude reference="cAt-Ha-jZl"/>
+                                <exclude reference="rcY-Zm-ots"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="handle" destination="j8z-20-AXP" id="pMg-2a-vl2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="290" y="386"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="3Zc-1b-1Oa">
+            <objects>
+                <viewController id="9TB-tw-255" customClass="ResultViewController" customModule="SecondKadaiApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TLh-iV-e85"/>
+                        <viewControllerLayoutGuide type="bottom" id="jwH-So-zwG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mHh-CZ-8j4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adG-ns-To1">
+                                <rect key="frame" x="279" y="94" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehZ-ms-3ER">
+                                <rect key="frame" x="277" y="209" width="46" height="30"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="gUP-cI-GPH" kind="unwind" unwindAction="unwind:" id="1cs-lG-Pk4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="adG-ns-To1" firstAttribute="centerX" secondItem="mHh-CZ-8j4" secondAttribute="centerX" id="37s-dk-md2"/>
+                            <constraint firstItem="adG-ns-To1" firstAttribute="centerY" secondItem="mHh-CZ-8j4" secondAttribute="centerY" constant="-195.5" id="9Ce-h6-lKi"/>
+                            <constraint firstItem="ehZ-ms-3ER" firstAttribute="centerX" secondItem="mHh-CZ-8j4" secondAttribute="centerX" id="Gc8-Dn-vvN"/>
+                            <constraint firstItem="ehZ-ms-3ER" firstAttribute="centerY" secondItem="mHh-CZ-8j4" secondAttribute="centerY" constant="-76" id="Ocx-Jx-Z7r"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="adG-ns-To1" id="Zmw-Kh-u7q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F6E-kS-1TK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gUP-cI-GPH" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="965" y="386"/>
         </scene>
     </scenes>
 </document>
